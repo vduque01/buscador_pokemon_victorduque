@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+    font-size: 16px;
+}
+
+
+.page_title{
+    @apply flex justify-center;
+    p{
+        @apply mt-[100px] w-[677px] text-[40px] font-semibold text-morado-200;
+    }
+}
+
+.main{
+    @apply flex justify-center bg-gradient-to-b from-start_gradient to-end_gradient rounded-t-[24px];
+    min-height: calc(100vh - 160px) ;
+    .main_holder{
+        @apply w-[677px] mt-6;
+        .search_bar_buttons{
+            @apply flex mb-6;
+            .search_form{
+                @apply flex grow;
+                .search_bar{
+                    @apply flex bg-white px-6 py-3 items-center rounded-full grow mr-4;
+                    .search_input{
+                    @apply ml-4;
+                    }
+                }
+                .search_button{
+                    @apply bg-morado-300 text-white rounded-full px-6 font-bold;
+                }
+            }
+        }
+        .alert_holder{
+            .alert{
+                @apply flex p-4 mb-6 bg-morado-100 rounded-3xl;
+                .alert_icon_holder{
+                    @apply py-1;
+                    .alert_icon{
+                        @apply p-1 bg-alert rounded-full;
+                    }
+                }
+                .alert_info{
+                    @apply mx-4 grow;
+                    .alert_title{
+                        @apply font-semibold text-alert;
+                    }
+                    .alert_text{
+                        @apply text-morado-text;
+                    }
+                }
+                .delete_button{
+                    @apply bg-morado-200 text-white px-6 py-3 rounded-full font-bold;
+                }
+            }
+        }
+        .cards{
+            @apply flex flex-col;
+            .result_pokemon{
+                
+            }
+            .historial{
+                .historial_header{
+                    @apply flex mb-4;
+                    .historial_title{
+                        @apply text-[23px] font-medium mr-4 ;
+                    }
+                    .reset_button{
+                        @apply border-2 border-morado-300 text-morado-300 rounded-full px-6 font-bold;
+                    }
+                }
+            }
+            .card{
+                @apply flex bg-white mb-4 p-6 rounded-3xl;
+                box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.2);
+                .poke_sprite{
+                    @apply bg-gray-300 rounded-md w-[172px] h-[172px] mr-6 flex p-7;
+                    img{
+
+                    }
+                }
+                .poke_info{
+                    @apply flex flex-col grow;
+                    .name_type{
+                        @apply mb-5;
+                        .poke_name{
+                            @apply  mb-2 font-bold text-[31px];
+                            .number{
+                                @apply text-morado-300 text-[31px]
+                                ;
+                            }
+                        }
+                        .types{
+                            @apply flex;
+                            .type{
+                                @apply bg-gray-200 px-3 py-1 rounded-full text-gray-600 mr-2;
+                            }
+                        }
+                    }
+                    .divider{
+                        @apply border-t-2 mb-5;
+                    }
+                    .poke_hab{
+                        @apply flex;
+                        .hab{
+                            @apply grow;
+                            .hab_title{
+                                @apply text-[13px] font-medium text-gray-400;
+                            }
+                            .hab_name{
+                                @apply text-[19px] font-medium;
+                            }
+                        }
+                        .hidden_hab{
+                            @apply grow;
+                            .hidden_hab_title{
+                                @apply text-[13px] font-medium text-gray-400;
+                            }
+                            .hidden_hab_name{
+                                @apply text-[19px] font-medium;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

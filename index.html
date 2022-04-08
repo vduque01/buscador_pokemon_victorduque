@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>vitejs_boiler</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="page_title">
+      <p>Buscador de Pokémon</p>
+    </div>
+    <!-- Main -->
+    <div class="main">
+      <div class="main_holder">
+        <div class="search_bar_buttons">
+          <form class="search_form">
+              <div class="search_bar">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.2372 14.4753L13.2159 11.463C14.1907 10.2211 14.7196 8.68756 14.7176 7.10882C14.7176 5.70283 14.3007 4.32841 13.5196 3.15937C12.7385 1.99033 11.6282 1.07918 10.3292 0.54113C9.03028 0.00308015 7.60094 -0.137698 6.22196 0.136597C4.84299 0.410893 3.57631 1.08794 2.58213 2.08213C1.58794 3.07631 0.910893 4.34299 0.636597 5.72196C0.362302 7.10094 0.50308 8.53028 1.04113 9.82925C1.57918 11.1282 2.49033 12.2385 3.65937 13.0196C4.82841 13.8007 6.20283 14.2176 7.60882 14.2176C9.18756 14.2196 10.7211 13.6907 11.963 12.7159L14.9753 15.7372C15.0579 15.8204 15.1562 15.8865 15.2645 15.9317C15.3728 15.9768 15.4889 16 15.6062 16C15.7236 16 15.8397 15.9768 15.948 15.9317C16.0563 15.8865 16.1545 15.8204 16.2372 15.7372C16.3204 15.6545 16.3865 15.5563 16.4317 15.448C16.4768 15.3397 16.5 15.2236 16.5 15.1062C16.5 14.9889 16.4768 14.8728 16.4317 14.7645C16.3865 14.6562 16.3204 14.5579 16.2372 14.4753ZM2.27721 7.10882C2.27721 6.05433 2.5899 5.02352 3.17575 4.14674C3.76159 3.26996 4.59428 2.58659 5.5685 2.18305C6.54273 1.77952 7.61474 1.67393 8.64897 1.87965C9.6832 2.08538 10.6332 2.59316 11.3788 3.3388C12.1245 4.08444 12.6323 5.03444 12.838 6.06868C13.0437 7.10291 12.9381 8.17492 12.5346 9.14914C12.1311 10.1234 11.4477 10.9561 10.5709 11.5419C9.69413 12.1277 8.66332 12.4404 7.60882 12.4404C6.19479 12.4404 4.83867 11.8787 3.8388 10.8788C2.83893 9.87897 2.27721 8.52285 2.27721 7.10882Z" fill="#717171"/>
+                </svg>
+                <input type="text" class="search_input" placeholder="Search Pokemon...">
+              </div>
+              <button class="search_button">
+                <p>Buscar</p>
+              </button>
+          </form>
+        </div>
+        <div class="alert_holder hidden">
+          <div class="alert">
+            <div class="alert_icon_holder">
+              <div class="alert_icon">
+                <svg width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.29271 6.81652C8.5691 7.09318 8.5691 7.52353 8.29271 7.80019C8.15451 7.93852 7.9856 8 7.80134 8C7.61708 8 7.44818 7.93852 7.30998 7.80019L4.5 4.98751L1.69002 7.80019C1.55182 7.93852 1.38292 8 1.19866 8C1.0144 8 0.845489 7.93852 0.707294 7.80019C0.430902 7.52353 0.430902 7.09318 0.707294 6.81652L3.51727 4.00384L0.707294 1.19116C0.430902 0.914506 0.430902 0.48415 0.707294 0.207493C0.983685 -0.0691643 1.41363 -0.0691643 1.69002 0.207493L4.5 3.02017L7.30998 0.207493C7.58637 -0.0691643 8.01631 -0.0691643 8.29271 0.207493C8.5691 0.48415 8.5691 0.914506 8.29271 1.19116L5.48273 4.00384L8.29271 6.81652Z" fill="#DADEEE"/>
+                </svg>
+              </div>
+            </div>
+            <div class="alert_info">
+              <p class="alert_title">No hemos encontrado el Pokémon que buscabas.</p>
+              <p class="alert_text">Intenta escribir el nombre de nuevo</p>
+            </div>
+            <button class="delete_button">
+              <p>Borrar</p>
+            </button>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="result_pokemon">
+
+          </div>
+          <div class="historial">
+            <div class="historial_header">
+              <h3 class="historial_title">Historial</h3>
+              <button class="reset_button">
+                <p>Borrar</p>
+              </button>
+            </div>
+            <div class="cards_historial">
+          
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="poke_sprite">
+
+            </div>
+            <div class="poke_info">
+              <div class="name_type">
+                <h2 class="poke_name">
+                  <span class="number">#129</span> Magikarp
+                </h2>
+                <div class="types">
+                  <div class="type">
+                    <p>Agua</p>
+                  </div>
+                  <div class="type">
+                    <p>Hada</p>
+                  </div>
+                </div>
+              </div>
+              <p class="poke_desc">
+                Este es el texto de descripción en el que se habla del Pokémon
+              </p>
+              <hr class="divider">
+              <div class="poke_hab">
+                <div class="hab">
+                  <p class="hab_title">HABILIDAD</p>
+                  <p class="hab_name">Salpicadura</p>
+                </div>
+                <div class="hidden_hab">
+                  <p class="hidden_hab_title">HABILIDAD OCULTA</p>
+                  <p class="hidden_hab_name">Salpicadura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="poke_sprite">
+
+            </div>
+            <div class="poke_info">
+              <div class="name_type">
+                <h2 class="poke_name">
+                  <span class="number">#129</span> Magikarp
+                </h2>
+                <div class="types">
+                  <div class="type">
+                    <p>Agua</p>
+                  </div>
+                  <div class="type">
+                    <p>Hada</p>
+                  </div>
+                </div>
+              </div>
+              <p class="poke_desc">
+                Este es el texto de descripción en el que se habla del Pokémon
+              </p>
+              <hr class="divider">
+              <div class="poke_hab">
+                <div class="hab">
+                  <p class="hab_title">HABILIDAD</p>
+                  <p class="hab_name">Salpicadura</p>
+                </div>
+                <div class="hidden_hab">
+                  <p class="hidden_hab_title">HABILIDAD OCULTA</p>
+                  <p class="hidden_hab_name">Salpicadura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="poke_sprite">
+
+            </div>
+            <div class="poke_info">
+              <div class="name_type">
+                <h2 class="poke_name">
+                  <span class="number">#129</span> Magikarp
+                </h2>
+                <div class="types">
+                  <div class="type">
+                    <p>Agua</p>
+                  </div>
+                  <div class="type">
+                    <p>Hada</p>
+                  </div>
+                </div>
+              </div>
+              <p class="poke_desc">
+                Este es el texto de descripción en el que se habla del Pokémon
+              </p>
+              <hr class="divider">
+              <div class="poke_hab">
+                <div class="hab">
+                  <p class="hab_title">HABILIDAD</p>
+                  <p class="hab_name">Salpicadura</p>
+                </div>
+                <div class="hidden_hab">
+                  <p class="hidden_hab_title">HABILIDAD OCULTA</p>
+                  <p class="hidden_hab_name">Salpicadura</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/app/main.js"></script>
+  </body>
+</html>
